@@ -11,6 +11,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href=" {{ asset('css/app.css') }}">
+        @yield('styles')
     </head>
     <body>
         <div id="app" class="{{ route_class() }}-page">
@@ -21,6 +22,8 @@
             </div>
             @include('layouts._footer')
         </div>
+        <!-- Scripts -->
         <script src=" {{ asset('js/app.js') }}"></script>
+        @yield('scripts')
     </body>
 </html>
