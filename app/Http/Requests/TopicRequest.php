@@ -15,8 +15,8 @@ class TopicRequest extends Request
             case 'PATCH':
             {
                 return [
-                    'title'        => 'required|2',
-                    'body'         => 'required|3',
+                    'title'        => 'required|min:2',
+                    'body'         => 'required|min:3',
                     'category_id'  => 'required|numeric',
                 ];
             }
