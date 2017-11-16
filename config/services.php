@@ -35,4 +35,8 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'youdao_translate' => [
+        'APP_KEY' => env('YOUDAO_TRANSLATE_APP_ID'),
+        'SEC_KEY' => env('YOUDAO_TRANSLATE_KEY'),
+    ],
 ];
