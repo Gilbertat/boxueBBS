@@ -7,7 +7,8 @@ return [
     'single' => '权限',
     'model' => Permission::class,
 
-    'permission' => function () {
+    'permission' => function ()
+    {
         return Auth::user()->can('manage_users');
     },
 
@@ -39,7 +40,7 @@ return [
         ],
     ],
 
-    'edit_field' => [
+    'edit_fields' => [
         'name' => [
             'title' => '标示(请慎重修改)',
             // 表单旁的提示信息

@@ -24,9 +24,9 @@ return [
         'permission' => [
             'title' => '权限',
             'output' => function ($value, $model) {
-                $model->load('permission');
+                $model->load('permissions');
                 $result = [];
-                foreach ($model->permission as $permission) {
+                foreach ($model->permissions as $permission) {
                     $result[] = $permission->name;
                 }
                 return empty($result) ? 'N/A' : implode($result, '|');
@@ -46,7 +46,7 @@ return [
         'name' => [
             'title' => '标识',
         ],
-        'permission' => [
+        'permissions' => [
             'type' => 'relationship',
             'title' => '权限',
             'name_field' => 'name',
