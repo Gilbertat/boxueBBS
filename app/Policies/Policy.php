@@ -15,8 +15,10 @@ class Policy
 
     public function before($user, $ability)
 	{
-	    // if ($user->isSuperAdmin()) {
-	    // 		return true;
-	    // }
+	    // 鉴权
+
+        if ($user->can('manage_contents')) {
+            return true;
+        }
 	}
 }
