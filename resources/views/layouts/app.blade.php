@@ -7,8 +7,9 @@
 
         <!-- CSRF Token-->
         <meta name="csrf-token" content=" {{ csrf_token() }}">
-        <title>@yield('title', 'boxueBBS') - 泊学论坛</title>
-        <meta name="description" content="@yield('description', '泊学论坛')" />
+        <title>@yield('title', 'boxueBBS') - {{ setting('site_name', '泊学论坛') }}</title>
+        <meta name="description" content="@yield('description', setting('seo_description', '泊学论坛'))" />
+        <meta name="keyword" content="@yield('keyword', setting('seo_keyword', '泊学论坛,社区,论坛,爱好者论坛'))" />
         <!-- Styles -->
         <link rel="stylesheet" href=" {{ asset('css/app.css') }}">
         @yield('styles')
