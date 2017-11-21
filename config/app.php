@@ -180,6 +180,9 @@ return [
         // captcha
         Mews\Captcha\CaptchaServiceProvider::class,
 
+        // ide helper
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
     ],
 
     /*
@@ -231,6 +234,8 @@ return [
 
         // captcha
         'Captcha' => Mews\Captcha\Facades\Captcha::class,
+
+
 
     ],
 
