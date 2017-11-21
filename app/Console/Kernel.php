@@ -25,7 +25,12 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
 
+        // 每小时同步一次
         $schedule->command('boxuebbs:calculate-active-user')->hourly();
+
+        // 每日同步一次
+        $schedule->command('boxuebbs:sync-user-activated-at')->daily('00:00');
+
     }
 
     /**
