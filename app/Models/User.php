@@ -75,7 +75,7 @@ class User extends Authenticatable
         if (strlen($value) != 60) {
             $value = bcrypt($value);
         }
-        $this->attributes['passwords'] = $value;
+        $this->attributes['password'] = $value;
     }
 
     public function setAvatarAttribute($path)

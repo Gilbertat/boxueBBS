@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class CategoriesController extends Controller
 {
-    public function show(Category $category, Request $request, Topic $topic, User $user)
+    public function show(Category $category, Request $request, Topic $topic, User $user, Link $link)
     {
         $topics = Topic::query()
             ->withOrder($request->order)
@@ -18,7 +18,9 @@ class CategoriesController extends Controller
 
         // 获取活跃用户
         $active_users = $user->getActiveUsers();
+        // 获取资源链接
+        $links = $link->getAllCached();
 
-        return view('topics.index', compact('topics', 'category', 'active_users'));
+        return view('topics.index', compact('topics', 'category', 'active_users', 'links'));
     }
 }
